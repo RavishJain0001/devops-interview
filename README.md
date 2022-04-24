@@ -1,4 +1,4 @@
-## DevOps Engineer - technical interview
+## DevOps Engineer - technical interview 
 
 ### Testing goals
 With this test, we want to see your ability to create a CI/CD pipeline and supporting infrastructure from scratch, as well as your skills as a system administrator.
