@@ -58,7 +58,7 @@ jobs:
       - name: Variable substitution
         uses: microsoft/variable-substitution@v1 
         with:
-          files: **/appsettings.Tests.json
+          files: '**/appsettings.Tests.json'
         env:
           'Web:WeatherApi.ApiKey': ${{ secrets.WEATHER_API_KEY }}
 
