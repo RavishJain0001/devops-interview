@@ -69,7 +69,7 @@ jobs:
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Test
-        run: dotnet vstest ${{env.DOTNET_ROOT}}/myapp/**/bin/**/BradyWeather.Tests.dll --collect:"XPlat Code Coverage"
+        run: dotnet vstest ${{env.DOTNET_ROOT}}/myapp/**/BradyWeather.Tests.dll --collect:"XPlat Code Coverage"
 
       - name: Copy arm templates to artifact folder
         run: cp -R ${{env.ARM_TEMPLATES_PATH}} ${{env.DOTNET_ROOT}}/myapp/
