@@ -71,6 +71,12 @@ jobs:
       - name: Test
         run: dotnet vstest ${{env.DOTNET_ROOT}}/myapp/**/BradyWeather.Tests.dll --collect:"XPlat Code Coverage"
 
+      - uses: codecov/codecov-action@v2
+        with:
+        files: **/coverage.cobertura.xml
+        flags: Tests 
+        verbose: true
+
       - name: Copy arm templates to artifact folder
         run: cp -R ${{env.ARM_TEMPLATES_PATH}} ${{env.DOTNET_ROOT}}/myapp/
 
