@@ -75,7 +75,6 @@ jobs:
         with:
           files: '**/coverage.cobertura.xml'
         flags: Tests 
-        verbose: true
 
       - name: Copy arm templates to artifact folder
         run: cp -R ${{env.ARM_TEMPLATES_PATH}} ${{env.DOTNET_ROOT}}/myapp/
