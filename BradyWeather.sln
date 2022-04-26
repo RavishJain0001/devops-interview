@@ -28,13 +28,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BradyWeather.Common", "Src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BradyWeather.Razor.Library", "Src\Common\BradyWeather.Razor.Library\BradyWeather.Razor.Library.csproj", "{E8C1F74D-6FB1-45CC-91B4-07157C4AF3F1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{291F2FF0-3F0C-4CFC-9736-7BD48D5A9123}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{FC27AAEB-217E-45A1-B54F-968C14439784}"
-	ProjectSection(SolutionItems) = preProject
-		BradyWeather-CI.yml = BradyWeather-CI.yml
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BradyWeather.Tests", "Tests\BradyWeather.Tests\BradyWeather.Tests.csproj", "{52E7055A-B94F-4F61-8566-590E9393E8C3}"
 EndProject
 Global
@@ -119,7 +112,6 @@ Global
 		{466C70E1-7B19-40C7-8D71-33915A2AE95C} = {A7CE6C36-3C62-43B4-9215-56F77F1F324D}
 		{6A07E2FC-3DC8-4FD0-B839-CE82927D66CA} = {466C70E1-7B19-40C7-8D71-33915A2AE95C}
 		{E8C1F74D-6FB1-45CC-91B4-07157C4AF3F1} = {466C70E1-7B19-40C7-8D71-33915A2AE95C}
-		{FC27AAEB-217E-45A1-B54F-968C14439784} = {291F2FF0-3F0C-4CFC-9736-7BD48D5A9123}
 		{52E7055A-B94F-4F61-8566-590E9393E8C3} = {2FE03EF4-A6EA-41A4-854B-0D80C3C50E3F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
