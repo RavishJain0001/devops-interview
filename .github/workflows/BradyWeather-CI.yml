@@ -65,11 +65,11 @@ jobs:
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
 
-      - name: Test
-        run: dotnet vstest **/bin/**/BradyWeather.Tests.dll
-
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+
+      - name: Test
+        run: dotnet vstest ${{env.DOTNET_ROOT}}/myapp/**/bin/**/BradyWeather.Tests.dll --collect:"XPlat Code Coverage"
 
       - name: Copy arm templates to artifact folder
         run: cp -R ${{env.ARM_TEMPLATES_PATH}} ${{env.DOTNET_ROOT}}/myapp/
