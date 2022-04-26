@@ -55,6 +55,13 @@ jobs:
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
+      - name: Variable substitution
+        uses: microsoft/variable-substitution@v1 
+        with:
+          files: **/appsettings.Tests.json
+        env:
+          'Web:WeatherApi.ApiKey': ${{ secrets.WEATHER_API_KEY }}
+
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
 
