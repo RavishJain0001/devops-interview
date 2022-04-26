@@ -74,7 +74,6 @@ jobs:
       - uses: codecov/codecov-action@v2
         with:
           files: '**/coverage.cobertura.xml'
-        flags: Tests 
 
       - name: Copy arm templates to artifact folder
         run: cp -R ${{env.ARM_TEMPLATES_PATH}} ${{env.DOTNET_ROOT}}/myapp/
