@@ -213,7 +213,7 @@ jobs:
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
           resourceGroupName: ${{ secrets.AZURE_RG }}
           template: ./templates/azuredeploy.json
-          parameters: ./templates/azuredeploy.dev.parameters.json
+          parameters: ./templates/azuredeploy.uat.parameters.json
       
       - name: Deploy to Staging Slot
         id: deploy-to-webapp-slot
@@ -260,7 +260,7 @@ jobs:
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
           resourceGroupName: ${{ secrets.AZURE_RG }}
           template: ./templates/azuredeploy.json
-          parameters: ./templates/azuredeploy.dev.parameters.json
+          parameters: ./templates/azuredeploy.prod.parameters.json
       
       - name: Deploy to Staging Slot
         id: deploy-to-webapp-slot
