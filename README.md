@@ -30,6 +30,7 @@ CI Consists of a combinations of actions as explained below -
 - It will run the Integrations tests defined in the solution and generate code coverage report. Code coverage report will be uploaded to Codecov and can be viewed as part of PR check. 
 - Static Analysis has been done using CodeQL default policies. 
 - Artifacts will be published as part of CI Job which then can be consumed by CD Jobs. 
+- On every main commit, a new tag and a release will be added in github main repo.
 
 ### CD Features
 #### IaC
