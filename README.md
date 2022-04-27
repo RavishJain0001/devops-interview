@@ -43,7 +43,7 @@ CI Consists of a combination of actions as explained below -
 - Named environments need not be persisted and can be deleted if only Automated testing is being done or can be deleted/created via a scheduled job for manual testing. This has been kept out of scope as part of this solution. 
 - All environments will be deployed with main branch. 
 
-![CI-CD Workflow](Docs/cicd.png)
+![CI-CD Workflow](Docs/cicd.PNG)
 
 #### Application Deployment
 Artifacts created in build job will be used to deploy app to the Azure web app. 
@@ -54,7 +54,7 @@ As part of PR,
 - Code coverage is added as one of the checks. If code coverage goes down from the previous commit, PR check will fail. 
 - CodeQL Static Analysis is added as one of the checks. 
 
-![CI-CD Workflow](Docs/pr.png)
+![CI-CD Workflow](Docs/pr.PNG)
 
 ### Environment URLs
 Dev - https://fsptest-dev.azurewebsites.net/
