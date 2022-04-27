@@ -19,6 +19,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: "csharp"
+
       - name: Bump version and push tag
         if: github.ref == 'refs/heads/main'
         id: tag_version
@@ -50,11 +55,25 @@ jobs:
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
-      - name: Test
-        run: dotnet vstest **/bin/**/BradyWeather.Tests.dll
+      - name: Variable substitution
+        uses: microsoft/variable-substitution@v1 
+        with:
+          files: '**/appsettings.Tests.json'
+        env:
+          'Web:WeatherApi.ApiKey': ${{ secrets.TEST_WEATHER_API_KEY }}
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
 
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+
+      - name: Test
+        run: dotnet vstest ${{env.DOTNET_ROOT}}/myapp/**/BradyWeather.Tests.dll --collect:"XPlat Code Coverage"
+
+      - uses: codecov/codecov-action@v2
+        with:
+          files: '**/coverage.cobertura.xml'
 
       - name: Copy arm templates to artifact folder
         run: cp -R ${{env.ARM_TEMPLATES_PATH}} ${{env.DOTNET_ROOT}}/myapp/
