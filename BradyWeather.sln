@@ -7,7 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{2E20DBD5-4
 	ProjectSection(SolutionItems) = preProject
 		Docs\arch.drawio = Docs\arch.drawio
 		Docs\BlazorWeather.gif = Docs\BlazorWeather.gif
+		Docs\cicd.PNG = Docs\cicd.PNG
+		Docs\pr.PNG = Docs\pr.PNG
 		readMe.md = readMe.md
+		Docs\README_TechnicalInterview.md = Docs\README_TechnicalInterview.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{A7CE6C36-3C62-43B4-9215-56F77F1F324D}"
