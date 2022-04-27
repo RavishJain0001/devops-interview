@@ -61,6 +61,3 @@ Dev - https://fsptest-dev.azurewebsites.net/
 Test - https://fsptest-test.azurewebsites.net/
 UAT - https://fsptest-uat.azurewebsites.net/
 PROD - https://fsptest-prod.azurewebsites.net/
-
-
-
